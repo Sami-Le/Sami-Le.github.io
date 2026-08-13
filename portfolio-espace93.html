@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu Navigation Portfolio - Composant</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Bouton hamburger (visible uniquement mobile) -->
+<button class="hamburger-btn" id="hamburgerBtn" aria-label="Ouvrir le menu">
+<span></span><span></span><span></span>
+</button>
+
+<!-- Overlay mobile -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+<!-- Menu de navigation portfolio -->
+<nav class="portfolio-nav" id="portfolioNav" data-purpose="portfolio-navigation">
+<div class="nav-name">Sami<br>Lemonnier</div>
+<div class="nav-section-label">Work</div>
+<div class="portfolio-nav-list"></div>
+<a href="index.html#contact" class="nav-contact-link">Contact</a>
+</nav>
+
+<!-- Contenu principal (exemple) -->
+<main class="portfolio-main">
+<div class="portfolio-content">
+
+<div class="page-header">
+<p class="exp-meta">Espace 93 · 8 semaines · 2024</p>
+<h1 class="exp-title">Assistant supports de communication</h1>
+</div>
+
+<div class="content-section">
+<div class="section-label">Contexte</div>
+<p class="context-text">L'Espace 93 est le théâtre municipal de Clichy-sous-Bois, doté d'une salle de 444 places et d'une programmation pluridisciplinaire (théâtre, danse, humour, cirque, concerts). J'y ai réalisé mon stage de BTS ERPC en tant qu'assistant supports de communication.</p>
+</div>
+
+<div class="content-section">
+<div class="section-label">Missions</div>
+<div class="card-grid">
+<div class="portfolio-card mission-card" data-mission="production">
+<div class="mission-arrow"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+<div class="card-image" data-mission-thumb="production"></div>
+<div class="card-body">
+<h4>Production graphique</h4>
+<p>Création de flyers et affiches pour la fête de la ville. Déclinaison de la charte graphique pour site internet et les réseaux sociaux (bannières, newsletters, profil)
+Indesign, Photoshop</p>
+</div>
+</div>
+<div class="portfolio-card mission-card" data-mission="suivi">
+<div class="mission-arrow"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+<div class="card-image" data-mission-thumb="suivi"></div>
+<div class="card-body">
+<h4>Suivi &amp; contrôle qualité</h4>
+<p>Réalisation d'un chemin de fer pour le guide brochure et d'un tableau de contrôle pour signaler les erreurs avant impression.</p>
+</div>
+</div>
+<div class="portfolio-card mission-card" data-mission="redaction">
+<div class="mission-arrow"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+<div class="card-image" data-mission-thumb="redaction"></div>
+<div class="card-body">
+<h4>Rédaction &amp; back-office</h4>
+<p>Rédaction des textes de présentation des spectacles et intégration via le back-office WordPress du site internet.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Lightbox carrousel style roue -->
+<div class="lightbox-overlay" id="lightboxOverlay">
+<button class="lightbox-close" id="lightboxClose">&times;</button>
+<div class="lightbox-content">
+<div class="carousel-track-wrap">
+<button class="lightbox-arrow lightbox-arrow-left" id="lightboxPrev">&#8249;</button>
+<div class="carousel-track" id="carouselTrack"></div>
+<button class="lightbox-arrow lightbox-arrow-right" id="lightboxNext">&#8250;</button>
+</div>
+<p class="lightbox-caption" id="lightboxCaption"></p>
+<p class="lightbox-counter" id="lightboxCounter"></p>
+</div>
+</div>
+
+<div class="content-section">
+<div class="section-label">Outils utilisés</div>
+<div class="tools-grid">
+<div class="tool-card"><div class="tool-icon"><img src="images/Adobe_Photoshop_CC_icon.svg" alt="Logo Photoshop"></div><div class="tool-name">Photoshop</div></div>
+<div class="tool-card"><div class="tool-icon"><img src="images/InDesign-icon.svg" alt="Logo InDesign"></div><div class="tool-name">InDesign</div></div>
+<div class="tool-card"><div class="tool-icon"><img src="images/icons8-imovie-96.png" alt="Logo iMovie"></div><div class="tool-name">iMovie</div></div>
+<div class="tool-card"><div class="tool-icon"><img src="images/Google_Sheets_2020_Logo.svg" alt="Logo Google Sheets"></div><div class="tool-name">Google Sheets</div></div>
+<div class="tool-card"><div class="tool-icon"><img src="images/WordPress-logotype-wmark-white.png" alt="Logo WordPress"></div><div class="tool-name">WordPress</div></div>
+</div>
+</div>
+
+<div class="page-footer-nav">
+<a href="index.html" class="footer-nav-link"><span class="direction-label">Retour</span>CV</a>
+<a href="portfolio-licence-pro.html" class="footer-nav-link" style="text-align:right;"><span class="direction-label">Suivant</span>Licence Pro →</a>
+</div>
+
+</div>
+</main>
+
+<script src="js/navigation.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+  // A REMPLACER : mettez ici vos vraies images/vidéos et commentaires
+  const missionsMedia = {
+    production: [
+      { type: 'image', src: "images/prod-esp93/flyer1-esp-recto.jpeg", caption: "Flyer de communication pour la saison culturelle 24/25 — Recto." },
+      { type: 'image', src: "images/prod-esp93/flyer1-esp-verso.jpeg", caption: "Flyer de communication pour la saison culturelle 24/25 — Verso." },
+      { type: 'image', src: "images/prod-esp93/flyer2-recto.webp", caption: "Flyer de communication pour la saison culturelle 24/25 — Recto." },
+      { type: 'image', src: "images/prod-esp93/flyer2-verso.webp", caption: "Flyer de communication pour la saison culturelle 24/25 — Verso." },
+      { type: 'video', src: "https://youtu.be/rFP9MMRWVlQ", caption: "Teaser de la saison culturelle" }
+    ],
+    suivi: [
+      { type: 'image', src: 'images/prod-esp93/chemin-de-fer-espace-93.png', caption: "Chemin de fer du guide brochure, avant validation." },
+      { type: 'image', src: 'images/prod-esp93/controle-mis-en-page.png', caption: "Tableau de contrôle qualité avant impression." }
+    ],
+    redaction: [
+      { type: 'image', src: 'images/prod-esp93/redaction-espace-93.png', caption: "Intégration des textes via le back-office WordPress du site." }
+    ]
+  };
+
+  // Diaporama automatique sur les vignettes des cartes missions
+  document.querySelectorAll('[data-mission-thumb]').forEach(function(container) {
+    const key = container.getAttribute('data-mission-thumb');
+    const media = (missionsMedia[key] || []).filter(item => item.type === 'image' || item.type === 'gif');
+    if (media.length === 0) return;
+
+    media.forEach(function(item, i) {
+      const slide = document.createElement('div');
+      slide.className = 'thumb-slide' + (i === 0 ? ' active' : '');
+
+      const bg = document.createElement('img');
+      bg.className = 'thumb-bg';
+      bg.src = item.src;
+      bg.alt = '';
+
+      const fg = document.createElement('img');
+      fg.className = 'thumb-fg';
+      fg.src = item.src;
+      fg.alt = item.caption;
+
+      slide.appendChild(bg);
+      slide.appendChild(fg);
+      container.appendChild(slide);
+    });
+
+    if (media.length > 1) {
+      let index = 0;
+      setInterval(function() {
+        const slides = container.querySelectorAll('.thumb-slide');
+        slides[index].classList.remove('active');
+        index = (index + 1) % slides.length;
+        slides[index].classList.add('active');
+      }, 3000);
+    }
+  });
+
+  const overlay = document.getElementById('lightboxOverlay');
+  const track = document.getElementById('carouselTrack');
+  const trackWrap = document.querySelector('.carousel-track-wrap');
+  const captionEl = document.getElementById('lightboxCaption');
+  const counterEl = document.getElementById('lightboxCounter');
+  const closeBtn = document.getElementById('lightboxClose');
+  const prevBtn = document.getElementById('lightboxPrev');
+  const nextBtn = document.getElementById('lightboxNext');
+
+  let currentMedia = [];
+  let currentIndex = 0;
+  const GAP = 16;
+
+  function getSlideWidth() {
+    const firstSlide = track.querySelector('.carousel-slide');
+    return firstSlide ? firstSlide.offsetWidth : 560;
+  }
+
+      function getYouTubeId(url) {
+      const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([^?&]+)/);
+      return match ? match[1] : null;
+    }
+
+    function buildTrack() {
+      track.innerHTML = '';
+      currentMedia.forEach((item, i) => {
+        const slide = document.createElement('div');
+        slide.className = 'carousel-slide';
+        slide.dataset.index = i;
+
+        const youtubeId = item.type === 'video' ? getYouTubeId(item.src) : null;
+
+        if (youtubeId) {
+          const iframe = document.createElement('iframe');
+          iframe.src = `https://www.youtube.com/embed/${youtubeId}`;
+          iframe.setAttribute('frameborder', '0');
+          iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+          iframe.setAttribute('allowfullscreen', '');
+          iframe.style.width = '100%';
+          iframe.style.height = '100%';
+          iframe.style.aspectRatio = '16 / 9';
+          slide.appendChild(iframe);
+        } else if (item.type === 'video') {
+          const video = document.createElement('video');
+          video.src = item.src;
+          video.controls = true;
+          slide.appendChild(video);
+        } else {
+          const img = document.createElement('img');
+          img.src = item.src;
+          img.alt = item.caption;
+          slide.appendChild(img);
+        }
+
+        slide.addEventListener('click', function(e) {
+          const idx = parseInt(this.dataset.index, 10);
+          if (idx !== currentIndex) {
+            e.stopPropagation();
+            currentIndex = idx;
+            updateCarousel();
+          }
+        });
+        track.appendChild(slide);
+      });
+    }
+
+  function updateCarousel() {
+    const slides = track.querySelectorAll('.carousel-slide');
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('is-active', i === currentIndex);
+      const video = slide.querySelector('video');
+      if (video && i !== currentIndex) video.pause();
+    });
+    const wrapWidth = trackWrap.offsetWidth;
+    const slideWidth = getSlideWidth();
+    const offset = (wrapWidth / 2) - (slideWidth / 2) - (currentIndex * (slideWidth + GAP));
+    track.style.transform = `translate(${offset}px, -50%)`;
+
+    const item = currentMedia[currentIndex];
+    captionEl.textContent = item ? item.caption : '';
+    counterEl.textContent = `${currentIndex + 1} / ${currentMedia.length}`;
+    prevBtn.style.visibility = currentMedia.length <= 1 ? 'hidden' : 'visible';
+    nextBtn.style.visibility = currentMedia.length <= 1 ? 'hidden' : 'visible';
+  }
+
+  function openLightbox(missionKey) {
+    currentMedia = missionsMedia[missionKey] || [];
+    currentIndex = 0;
+    if (currentMedia.length === 0) return;
+    buildTrack();
+    overlay.classList.add('visible');
+    requestAnimationFrame(updateCarousel);
+  }
+
+  function closeLightbox() {
+    overlay.classList.remove('visible');
+    track.querySelectorAll('video').forEach(v => v.pause());
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % currentMedia.length;
+    updateCarousel();
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + currentMedia.length) % currentMedia.length;
+    updateCarousel();
+  }
+
+  document.querySelectorAll('.mission-card').forEach(card => {
+    card.addEventListener('click', function() {
+      this.classList.add('clicked');
+      setTimeout(() => this.classList.remove('clicked'), 400);
+      openLightbox(this.getAttribute('data-mission'));
+    });
+  });
+
+  closeBtn.addEventListener('click', closeLightbox);
+  overlay.addEventListener('click', function(e) {
+    if (e.target === overlay) closeLightbox();
+  });
+  prevBtn.addEventListener('click', nextSlideGuard(prevSlide));
+  nextBtn.addEventListener('click', nextSlideGuard(nextSlide));
+
+  function nextSlideGuard(fn) {
+    return function(e) {
+      e.stopPropagation();
+      fn();
+    };
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (!overlay.classList.contains('visible')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowRight') nextSlide();
+    if (e.key === 'ArrowLeft') prevSlide();
+  });
+
+  window.addEventListener('resize', function() {
+    if (overlay.classList.contains('visible')) updateCarousel();
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,531 @@
+<!DOCTYPE html><html class="bg-[#ededed] text-black font-sans min-h-screen" lang="fr" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Sami Lemonnier - CV / Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif']
+      },
+      colors: {
+        'surface': '#ededed',
+        'surface-container': '#f4f3f3',
+        'azure': '#0057a5',
+        'accent-red': '#931004',
+        'divider': '#3f3f3e',
+      }
+    }
+  }
+}
+  </script>
+
+
+
+<style>
+.reveal {
+  opacity: 0;
+  transform: translateY(40px) scale(0.97);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal-card {
+  transform: translateY(35px) scale(0.93);
+}
+.reveal-card.visible {
+  transform: translateY(0) scale(1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.reveal-card {
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+#cursor-gallery {
+  transform: translate(-50%, -120%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+#cursor-gallery.active {
+  opacity: 1;
+}
+#cursor-gallery .gallery-img {
+  opacity: 0;
+  transform: translateY(10px) scale(0.8);
+  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+#cursor-gallery.active .gallery-img {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+#cursor-gallery .gallery-img:nth-child(1) { transition-delay: 0ms; }
+#cursor-gallery .gallery-img:nth-child(2) { transition-delay: 40ms; }
+#cursor-gallery .gallery-img:nth-child(3) { transition-delay: 80ms; }
+#cursor-gallery .gallery-img:nth-child(4) { transition-delay: 120ms; }
+#cursor-gallery .gallery-img:nth-child(5) { transition-delay: 160ms; }
+</style>
+</head>
+<style>
+  html {
+    background-color: #ededed;
+    background-image:
+      linear-gradient(rgba(63,63,62,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(63,63,62,0.06) 1px, transparent 1px);
+    background-size: 32px 32px;
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+</style>
+<body class="text-black p-4 md:p-8 flex flex-col md:flex-row gap-8 max-w-7xl mx-auto">
+<!-- BEGIN: Sidebar / Profile Info -->
+<aside class="w-full md:w-1/3 lg:w-1/4 flex flex-col gap-6" data-purpose="sidebar-profile">
+<!-- Profile Card -->
+<div class="bg-white rounded-none p-6 shadow-sm border border-gray-200 flex flex-col items-center text-center">
+<img alt="Sami Lemonnier Profile Picture" class="w-48 h-64 rounded-none object-cover object-top mb-4" src="images/photo-SAMI-souriant.jpg">
+<div class="bg-transparent border border-[#455252] text-black text-xs font-semibold px-3 py-1 rounded-none flex items-center gap-2 mb-4">
+<span class="relative flex items-center justify-center w-2 h-2">
+<span class="absolute inset-0 rounded-full bg-green-500 opacity-75 animate-ping"></span>
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+</span>
+        Disponible
+      </div>
+<h2 class="text-2xl font-bold mb-4">Sami lemonnier</h2>
+<!-- Social Links (Placeholders) -->
+<div class="flex gap-3 mb-6">
+<a class="w-10 h-10 rounded-full bg-surface flex items-center justify-center hover:bg-gray-200 transition-colors" href="#">IG</a>
+<a class="w-10 h-10 rounded-full bg-surface flex items-center justify-center hover:bg-gray-200 transition-colors" href="#">TW</a>
+<a class="w-10 h-10 rounded-full bg-surface flex items-center justify-center hover:bg-gray-200 transition-colors" href="#">YT</a>
+<a class="w-10 h-10 rounded-full bg-surface flex items-center justify-center hover:bg-gray-200 transition-colors" href="#">LI</a>
+</div>
+<!-- Action Buttons -->
+<div class="w-full flex gap-3"><a class="flex-1 border border-divider text-black py-2 rounded-none text-sm font-medium hover:bg-gray-100 transition-colors flex flex-col items-center justify-center gap-1 text-center whitespace-nowrap" href="#portfolio"><img class="w-4 h-4 object-contain" alt="Icône Portfolio" src="images/icone_portfolio.png"><span class="text-xs leading-none">Portfolio</span></a>
+<a class="flex-1 border border-divider text-black py-2 rounded-none text-sm font-medium hover:bg-gray-100 transition-colors flex flex-col items-center justify-center gap-1 text-center whitespace-nowrap" href="documents/CV_Sami_Lemonnier.pdf" target="_blank" rel="noopener noreferrer">
+<span class="text-base leading-none">⬇</span><span class="text-xs leading-none">mon CV</span>
+        </a>
+<a class="flex-1 bg-[#00bfff] text-black py-2 rounded-none text-sm font-medium hover:bg-opacity-80 transition-colors flex flex-col items-center justify-center gap-1 text-center whitespace-nowrap" href="#contact">
+<img class="w-4 h-4 object-contain" alt="Icône Contact" src="images/icons8-carte-contact-50.png"><span class="text-xs leading-none">Contact</span>
+        </a>
+</div>
+</div>
+</aside>
+<!-- END: Sidebar / Profile Info -->
+<!-- BEGIN: Main Content Area -->
+<main class="w-full md:w-2/3 lg:w-3/4 flex flex-col gap-12 pb-12" data-purpose="main-content">
+<!-- Hero Section -->
+<section data-purpose="hero-intro" class="reveal relative">
+<div class="relative z-10 pt-2">
+<img class="w-10 h-10 mb-4 object-contain" alt="Icône bienvenue" src="images/icons_hello.png">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 leading-tight">
+        Sami Lemonnier
+      </h1>
+<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-azure mb-2" style="white-space: nowrap; overflow: hidden;">
+        <span id="typewriter-text"></span><span id="typewriter-cursor" style="display: inline-block; background-color: #0057a5; width: 4px; height: 38.4px; margin-left: 4px; animation: 1s steps(1, start) infinite blink; vertical-align: middle;"></span>
+      </h2>
+<h3 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
+        Clichy-sous-Bois
+      </h3>
+<div class="mt-8">
+<h4 class="text-sm font-bold uppercase tracking-wider mb-3">RECHERCHE D'ALTERNANCE</h4>
+<p class="text-gray-700 leading-relaxed text-sm md:text-base max-w-3xl" style="color: rgb(51, 51, 51);">À la recherche d'une alternance dans le cadre du Master Numérique : Enjeux et Technologies (NET), sur un rythme 2 jours en formation / 3 jours en entreprise. Fort d'une première expérience en conception e-learning et automatisation. je vise des missions en conception de dispositifs numériques, UX/UI ou développement de contenus digitaux.</p>
+</div>
+</div>
+<div class="grid-panel w-full h-6 md:h-8 mt-8"></div>
+</section>
+<!-- Experience Section -->
+<section data-purpose="experience" class="reveal">
+<div class="flex items-center gap-3 mb-6">
+<img class="w-6 h-6 object-contain" alt="Icône expérience" src="images/icons_exp_pro.png">
+<h2 class="text-xl font-bold uppercase tracking-wide text-azure">EXPÉRIENCE PROFESSIONNELLE</h2>
+</div>
+<div class="flex flex-col gap-4"><article class="bg-white border border-gray-200 rounded-none p-6 shadow-sm hover:shadow-md transition-shadow"><div class="flex justify-between items-start mb-4"><div class="flex items-center gap-4"><img class="w-10 h-10 rounded-none object-contain" alt="Logo Ministère de l'Intérieur" src="images/Logo_du_Ministere_de_l'Interieur_(2020).svg"><div><h3 class="font-bold text-lg" style="color: rgb(147, 16, 4); font-weight: bold;">CONCEPTEUR PEDAGOGIQUE E-LEARNING</h3><p class="text-gray-500 text-sm" style="color: rgb(102, 102, 102);">Ministère de l'Intérieur (Sous-direction du Recrutement et de la Formation)</p></div></div><span class="bg-surface text-gray-600 px-3 py-1 rounded-none text-sm font-medium" style="color: rgb(102, 102, 102);">2025-26</span></div><ul class="text-gray-700 text-sm space-y-2 list-none pl-1" style="color: rgb(51, 51, 51);"><li class="">• Conception de parcours et rédaction de storyboards e-learning.</li><li class="">• Création de modules sur Storyline 360 (respect charte État &amp; normes RGAA).</li><li class="">• Projet d'automatisation du flux de production (parsing de scripts texte vers JSON/XML).</li></ul></article><article class="bg-white border border-gray-200 rounded-none p-6 shadow-sm hover:shadow-md transition-shadow"><div class="flex justify-between items-start mb-4"><div class="flex items-center gap-4"><img class="w-10 h-10 rounded-none object-contain" alt="Logo Espace 93" src="images/logo_espace_93.png"><div><h3 class="font-bold text-lg" style="color: rgb(147, 16, 4); font-weight: bold;">ASSISTANT SUPPORTS DE COMMUNICATION</h3><p class="text-gray-500 text-sm" style="color: rgb(102, 102, 102);">Espace 93 - Salle de spectacle, 8 semaines</p></div></div><span class="bg-surface text-gray-600 px-3 py-1 rounded-none text-sm font-medium" style="color: rgb(102, 102, 102);">2024</span></div><ul class="text-gray-700 text-sm space-y-2 list-none pl-1" style="color: rgb(51, 51, 51);"><li class="">• Production graphique flyer, vidéo, affiches et déclinaisons visuels pour les réseaux sociaux et site web en accord avec la charte graphique</li><li class="">• Suivi et contrôle qualité sur les Produits imprimés</li><li class="">• Rédaction et intégration de contenus pour le site internet</li></ul></article><article class="bg-white border border-gray-200 rounded-none p-6 shadow-sm hover:shadow-md transition-shadow"><div class="flex justify-between items-start mb-4"><div class="flex items-center gap-4"><img class="w-10 h-10 rounded-none object-contain" alt="Logo McDonald's" src="images/Logo_macdonald.png"><div><h3 class="font-bold text-lg" style="color: rgb(147, 16, 4); font-weight: bold;">ÉQUIPIER POLYVALENT</h3><p class="text-gray-500 text-sm" style="color: rgb(102, 102, 102);">McDonald's</p></div></div><span class="bg-surface text-gray-600 px-3 py-1 rounded-none text-sm font-medium" style="color: rgb(102, 102, 102);">2025-...</span></div><ul class="text-gray-700 text-sm space-y-2 list-none pl-1" style="color: rgb(51, 51, 51);"><li class="">• Service, préparation, entretien</li><li class="">• Travail en équipe et rythme soutenu</li></ul></article></div>
+</section>
+<!-- Portfolio Section -->
+<section data-purpose="portfolio" id="portfolio" class="flex flex-col gap-6"><div class="flex items-center gap-3 mb-6"><img class="w-6 h-6 object-contain" alt="Icône portfolio" src="images/icone_portfolio.png"><h2 class="text-xl font-bold uppercase tracking-wide text-azure">PORTFOLIO</h2></div><div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+
+<a href="portfolio-ministere-interieur.html" class="reveal reveal-stagger reveal-card bg-white border border-gray-200 -m-px rounded-none overflow-hidden shadow-sm hover:shadow-md hover:z-10 relative group block" style="transition-delay:0ms;"><div class="h-48 bg-gray-100 flex items-center justify-center text-gray-400 overflow-hidden"><img class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110" alt="Image Ministère de l'Intérieur" src="images/SDRF-LOGNES.jpg"></div><div class="p-6"><h3 class="font-bold text-lg mb-2" style="color: #931004;">Conception E-learning - Ministère de l'Intérieur</h3><p class="text-sm mb-4" style="color: #333333;">Conception de parcours pédagogiques et automatisation du flux de production (parsing de scripts texte vers JSON/XML) pour optimiser la création de modules.</p><div class="flex gap-2 flex-wrap"><span class="text-xs px-2 py-1 bg-surface rounded-none" style="color: #666666;">Storyline 360</span><span class="text-xs px-2 py-1 bg-surface rounded-none" style="color: #666666;">Python</span><span class="text-xs px-2 py-1 bg-surface rounded-none" style="color: #666666;">JS</span><span class="text-xs px-2 py-1 bg-surface rounded-none" style="color: #666666;">JSON/XML</span></div></div><div class="absolute bottom-4 right-4 w-10 h-10 rounded-full border-2 border-accent-red flex items-center justify-center text-accent-red transition-all duration-300 group-hover:bg-accent-red group-hover:text-white group-hover:rotate-45 active:scale-90">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+</div></a>
+
+<a href="portfolio-espace93.html" class="reveal reveal-stagger reveal-card bg-white border border-gray-200 -m-px rounded-none overflow-hidden shadow-sm hover:shadow-md hover:z-10 relative group block" style="transition-delay:180ms;"><div class="h-48 bg-gray-100 flex items-center justify-center text-gray-400 overflow-hidden"><img class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110" alt="Image Espace 93" src="images/photo_Espace93.jpg"></div><div class="p-6"><h3 class="font-bold text-lg mb-2" style="color: #931004;">Assistant supports de communication - Espace 93</h3><p class="text-sm mb-4" style="color: #333333;">Production graphique flyer, vidéo, affiches et déclinaisons visuels pour les réseaux sociaux et site web. Suivi et contrôle qualité.</p><div class="flex gap-2 flex-wrap"><span class="text-xs px-2 py-1 bg-surface rounded-none" style="color: #666666;">Photoshop</span><span class="text-xs px-2 py-1 bg-surface rounded-none" style="color: #666666;">Illustrator</span><span class="text-xs px-2 py-1 bg-surface rounded-none" style="color: #666666;">InDesign</span></div></div><div class="absolute bottom-4 right-4 w-10 h-10 rounded-full border-2 border-accent-red flex items-center justify-center text-accent-red transition-all duration-300 group-hover:bg-accent-red group-hover:text-white group-hover:rotate-45 active:scale-90">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+</div></a>
+
+<a href="portfolio-licence-pro.html" class="reveal reveal-stagger reveal-card bg-white border border-gray-200 -m-px rounded-none overflow-hidden shadow-sm hover:shadow-md hover:z-10 relative group block" style="transition-delay:360ms;"><div class="h-48 bg-gray-100 flex items-center justify-center text-gray-400 overflow-hidden"><img class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110" alt="Image BTS ERPC" src="images/estienne-2.jpg"></div><div class="p-6"><h3 class="font-bold text-lg mb-2" style="color: #931004;">Réalisations - BTS ERPC</h3><p class="text-sm mb-4" style="color: #333333;">Projets de réalisation de communication plurimédia menés durant le BTS.</p><div class="flex gap-2 flex-wrap"><span class="text-xs px-2 py-1 bg-surface rounded-none" style="color: #666666;">PAO</span><span class="text-xs px-2 py-1 bg-surface rounded-none" style="color: #666666;">Communication</span><span class="text-xs px-2 py-1 bg-surface rounded-none" style="color: #666666;">Plurimédia</span></div></div><div class="absolute bottom-4 right-4 w-10 h-10 rounded-full border-2 border-accent-red flex items-center justify-center text-accent-red transition-all duration-300 group-hover:bg-accent-red group-hover:text-white group-hover:rotate-45 active:scale-90">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+</div></a>
+
+<a href="portfolio-licence-pro.html" class="reveal reveal-stagger reveal-card bg-white border border-gray-200 -m-px rounded-none overflow-hidden shadow-sm hover:shadow-md hover:z-10 relative group block" style="transition-delay:540ms;"><div class="h-48 bg-gray-100 flex items-center justify-center text-gray-400 overflow-hidden"><img class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110" alt="Image Licence pro" src="images/Ecole_Estienne_Paris.jpeg"></div><div class="p-6"><h3 class="font-bold text-lg mb-2" style="color: #931004;">Réalisations - Licence pro Innovation Numérique</h3><p class="text-sm mb-4" style="color: #333333;">Projets réalisés dans le cadre de la Licence pro Innovation Numérique dans l'Édition, École Estienne ESAIG.</p><div class="flex gap-2 flex-wrap"><span class="text-xs px-2 py-1 bg-surface rounded-none" style="color: #666666;">Édition numérique</span><span class="text-xs px-2 py-1 bg-surface rounded-none" style="color: #666666;">Innovation</span><span class="text-xs px-2 py-1 bg-surface rounded-none" style="color: #666666;">Design</span></div></div><div class="absolute bottom-4 right-4 w-10 h-10 rounded-full border-2 border-accent-red flex items-center justify-center text-accent-red transition-all duration-300 group-hover:bg-accent-red group-hover:text-white group-hover:rotate-45 active:scale-90">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+</div></a>
+
+</div></section>
+
+<section class="grid grid-cols-1 md:grid-cols-2 gap-8"><div data-purpose="competences"><div class="flex items-center gap-3 mb-6"><img class="w-6 h-6 object-contain" alt="Icône compétences" src="images/skills.png"><h2 class="text-xl font-bold uppercase tracking-wide text-azure">COMPÉTENCES</h2></div><ul class="space-y-4 text-sm" style="color: rgb(51, 51, 51);"><li class=""><span class="font-bold">Outils auteurs</span> - (Storyline 360, Adapt Learning), Suite Adobe (Illustrator, Premiere, langages de structuration/script (HTML, CSS, JSON, notions de Python/JS)</li><li class=""><span class="font-bold">IA</span> - Claude, gemini (utilisé pour accélérer la productivité et veille)</li><li class=""><span class="font-bold">Soft skills</span> - Curiosité sur les différents projets et logiciels proposés, autonome</li></ul></div><div data-purpose="languages"><div class="flex items-center gap-3 mb-6"><img class="w-6 h-6 object-contain" alt="Icône langues" src="images/icons-langue.png"><h2 class="text-xl font-bold uppercase tracking-wide text-azure">LANGUES</h2></div><ul class="space-y-2 text-sm" style="color: rgb(51, 51, 51);"><li class="">Français (maternelle)</li><li class="">Anglais - niveau B1, TOEIC 705</li></ul></div></section>
+<!-- Formations Section -->
+<section data-purpose="formations" class="reveal">
+<div class="flex items-center gap-3 mb-6">
+<img class="w-6 h-6 object-contain" alt="Icône formation" src="images/icons8-diplome-100.png">
+<h2 class="text-xl font-bold uppercase tracking-wide text-azure">FORMATIONS</h2>
+</div>
+<div class="flex flex-col gap-4"><article class="bg-white border border-gray-200 rounded-none p-6 shadow-sm hover:shadow-md transition-shadow"><div class="flex justify-between items-start mb-4"><div class="flex items-center gap-4"><img class="w-10 h-10 rounded-none object-contain" alt="Logo Université Paris 8" src="images/logo_paris8.png"><div><h3 class="font-bold text-lg leading-tight mb-1" style="color: rgb(147, 16, 4); font-weight: bold;">Master Numérique : Enjeux et Technologies (NET)</h3><p class="text-gray-500 text-sm" style="color: rgb(102, 102, 102);">Université Paris 8 Vincennes - Saint-Denis</p></div></div><span class="bg-surface text-gray-600 px-3 py-1 rounded-none text-sm font-medium shrink-0 ml-4" style="color: rgb(102, 102, 102);">2026 - en cours</span></div></article><article class="bg-white border border-gray-200 rounded-none p-6 shadow-sm hover:shadow-md transition-shadow"><div class="flex justify-between items-start mb-4"><div class="flex items-center gap-4"><img class="w-10 h-10 rounded-none object-contain" alt="Logo École Estienne ESAIG" src="images/Logo_Ecole_Estienne.jpg"><div><h3 class="font-bold text-lg leading-tight mb-1" style="color: rgb(147, 16, 4); font-weight: bold;">Licence pro Innovation Numérique dans l'Édition</h3><p class="text-gray-500 text-sm" style="color: rgb(102, 102, 102);">École Estienne ESAIG - Paris</p></div></div><span class="bg-surface text-gray-600 px-3 py-1 rounded-none text-sm font-medium shrink-0 ml-4" style="color: rgb(102, 102, 102);">2026</span></div></article><article class="bg-white border border-gray-200 rounded-none p-6 shadow-sm hover:shadow-md transition-shadow"><div class="flex justify-between items-start mb-4"><div class="flex items-center gap-4"><img class="w-10 h-10 rounded-none object-contain" alt="Logo Lycée Renée Cassin" src="images/Logo_Ecole_Estienne.jpg"><div><h3 class="font-bold text-lg leading-tight mb-1" style="color: rgb(147, 16, 4); font-weight: bold;">BTS ERPC - Études de réalisation d'un projet de communication option plurimédia</h3><p class="text-gray-500 text-sm" style="color: rgb(102, 102, 102);">École Estienne ESAIG - Paris</p></div></div><span class="bg-surface text-gray-600 px-3 py-1 rounded-none text-sm font-medium shrink-0 ml-4" style="color: rgb(102, 102, 102);">2025</span></div></article></div>
+</section>
+<!-- Logiciels Section -->
+<section data-purpose="software-skills" class="reveal">
+<div class="flex items-center gap-3 mb-6">
+<img class="w-6 h-6 object-contain" alt="Icône logiciels" src="images/icon-logiciels.png">
+<h2 class="text-xl font-bold uppercase tracking-wide text-azure">Logiciels</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"><div class="bg-white border border-gray-200 rounded-none p-4 flex items-center gap-4 shadow-sm"><img class="w-12 h-12 rounded-none object-contain" alt="Logo InDesign" src="images/InDesign-icon.svg"><div><h4 class="font-bold text-sm">InDesign</h4></div></div><div class="bg-white border border-gray-200 rounded-none p-4 flex items-center gap-4 shadow-sm"><img class="w-12 h-12 rounded-none object-contain" alt="Logo Photoshop" src="images/Adobe_Photoshop_con.svg"><div><h4 class="font-bold text-sm">Photoshop</h4></div></div><div class="bg-white border border-gray-200 rounded-none p-4 flex items-center gap-4 shadow-sm"><img class="w-12 h-12 rounded-none object-contain" alt="Logo Excel" src="images/Microsoft_Office_Excel-logo.svg"><div><h4 class="font-bold text-sm">Excel</h4></div></div><div class="bg-white border border-gray-200 rounded-none p-4 flex items-center gap-4 shadow-sm"><img class="w-12 h-12 rounded-none object-contain" alt="Logo Acrobat pro" src="images/Adobe_Acrobat_DC_logo_2020.svg"><div><h4 class="font-bold text-sm">Acrobat pro</h4></div></div><div class="bg-white border border-gray-200 rounded-none p-4 flex items-center gap-4 shadow-sm"><img class="w-12 h-12 rounded-none object-contain" alt="Logo Illustrator" src="images/Adobe_Illustrator_CC_icon.svg"><div><h4 class="font-bold text-sm">Illustrator</h4></div></div><div class="bg-white border border-gray-200 rounded-none p-4 flex items-center gap-4 shadow-sm"><img class="w-12 h-12 rounded-none object-contain" alt="Logo Premiere pro" src="images/Adobe_Premiere_Pro_CC_icon.svg"><div><h4 class="font-bold text-sm">Premiere pro</h4></div></div><div class="bg-white border border-gray-200 rounded-none p-4 flex items-center gap-4 shadow-sm"><img class="w-12 h-12 rounded-none object-contain" alt="Logo Visual Studio Code" src="images/Visual_Studio_Code_1.35_icon.svg"><div><h4 class="font-bold text-sm">Visual Code</h4></div></div><div class="bg-white border border-gray-200 rounded-none p-4 flex items-center gap-4 shadow-sm"><img class="w-12 h-12 rounded-none object-contain" alt="Logo WordPress" src="images/WordPress-logotype-wmark.png"><div><h4 class="font-bold text-sm">WordPress</h4></div></div><div class="bg-white border border-gray-200 rounded-none p-4 flex items-center gap-4 shadow-sm"><img class="w-12 h-12 rounded-none object-contain" alt="Logo Storyline" src="images/logo-Articulate-Storyline.svg"><div><h4 class="font-bold text-sm">Storyline</h4></div></div><div class="bg-white border border-gray-200 rounded-none p-4 flex items-center gap-4 shadow-sm"><img class="w-12 h-12 rounded-none object-contain" alt="Logo Figma" src="images/Figma-logo.svg"><div><h4 class="font-bold text-sm">Figma</h4></div></div></div>
+</section>
+<section data-purpose="interests" class="reveal"><div class="flex items-center gap-3 mb-6"><img class="w-6 h-6 object-contain" alt="Icône portfolio" src="images/passe-temps.png"><h2 class="text-xl font-bold uppercase tracking-wide text-azure">CENTRES D'INTÉRÊTS</h2></div><p class="text-gray-700 text-sm" style="color: rgb(51, 51, 51);"><span class="interest-hover cursor-pointer underline decoration-dotted" data-gallery="cinema">Cinéma</span>, <span class="interest-hover cursor-pointer underline decoration-dotted" data-gallery="jeux">Jeux vidéo</span>, <span class="interest-hover cursor-pointer underline decoration-dotted" data-gallery="culture">Culture populaire</span></p>
+
+</section>
+<!-- Contact Section -->
+<section data-purpose="contact-form-info" id="contact" class="reveal">
+<div class="flex items-center gap-3 mb-6">
+<img class="w-6 h-6 object-contain" alt="Icône contact" src="images/icons8-carte-contact-50.png">
+<h2 class="text-xl font-bold uppercase tracking-wide text-azure">Contact</h2>
+</div>
+<div class="flex flex-col md:flex-row gap-8">
+<!-- Contact Info -->
+<div class="w-full md:w-1/2 flex flex-col gap-4">
+<div class="bg-white border border-gray-200 rounded-none p-4 flex items-center gap-4 shadow-sm">
+<span class="w-10 h-10 bg-green-100 text-green-600 rounded-full flex items-center justify-center p-2"><img class="w-full h-full object-contain" alt="Icône téléphone" src="images/icons8-telephone-80.png"></span>
+<div>
+<p class="text-gray-500 text-xs uppercase tracking-wide mb-1" style="color: rgb(102, 102, 102);">Numéro de contact</p>
+<p class="font-bold text-sm">06.21.29.12.12</p>
+</div>
+</div>
+<div class="bg-white border border-gray-200 rounded-none p-4 flex items-center gap-4 shadow-sm">
+<span class="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center p-2"><img class="w-full h-full object-contain" alt="Icône email" src="images/icons8-courrier-80.png"></span>
+<div>
+<p class="text-gray-500 text-xs uppercase tracking-wide mb-1" style="color: rgb(102, 102, 102);">E-mail</p>
+<p class="font-bold text-sm">sami.lemonnier22@gmail.com</p>
+</div>
+</div>
+<div class="bg-white border border-gray-200 rounded-none p-4 flex items-center gap-4 shadow-sm">
+<span class="w-10 h-10 bg-red-100 text-red-600 rounded-full flex items-center justify-center p-2"><img class="w-full h-full object-contain" alt="Icône localisation" src="images/icons8-marqueur-de-plan-64.png"></span>
+<div>
+<p class="text-gray-500 text-xs uppercase tracking-wide mb-1" style="color: rgb(102, 102, 102);">Adresse</p>
+<p class="font-bold text-sm">Clichy-sous-Bois</p>
+</div>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="w-full md:w-1/2">
+<form id="contactForm" class="flex flex-col gap-4" action="https://formspree.io/f/xqpzabqe" method="POST">
+<input class="w-full bg-white border border-gray-200 rounded-none p-3 text-sm focus:outline-none focus:border-azure shadow-sm" placeholder="Nom" type="text" name="nom" required>
+<input class="w-full bg-white border border-gray-200 rounded-none p-3 text-sm focus:outline-none focus:border-azure shadow-sm" placeholder="Email" type="email" name="email" required>
+<input class="w-full bg-white border border-gray-200 rounded-none p-3 text-sm focus:outline-none focus:border-azure shadow-sm" placeholder="numéro de téléphone" type="tel" name="telephone">
+<textarea class="w-full bg-white border border-gray-200 rounded-none p-3 text-sm focus:outline-none focus:border-azure shadow-sm resize-none" placeholder="Message" rows="4" name="message" required></textarea>
+<input type="hidden" name="_subject" value="Nouveau message depuis le portfolio">
+<button id="contactSubmitBtn" class="w-full bg-[#00bfff] text-black font-medium py-3 rounded-none hover:bg-opacity-80 transition-colors mt-2" type="submit">
+              Envoyer message
+            </button>
+</form>
+
+<!-- Message de confirmation / erreur -->
+<div id="formFeedback" class="mt-4 p-3 rounded-none text-sm hidden"></div>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('contactSubmitBtn');
+  const feedback = document.getElementById('formFeedback');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const originalBtnText = submitBtn.textContent;
+    submitBtn.textContent = 'Envoi en cours...';
+    submitBtn.disabled = true;
+    feedback.classList.add('hidden');
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    })
+      .then(function(response) {
+        if (response.ok) {
+          feedback.textContent = 'Merci ! Votre message a bien été envoyé.';
+          feedback.className = 'mt-4 p-3 rounded-none text-sm bg-green-100 text-green-800 border border-green-300';
+          feedback.classList.remove('hidden');
+          form.reset();
+        } else {
+          return response.json().then(function(data) {
+            throw new Error(data.error || 'Une erreur est survenue.');
+          });
+        }
+      })
+      .catch(function(error) {
+        feedback.textContent = 'Erreur lors de l\'envoi : ' + error.message + ' Réessayez ou contactez-moi directement par email.';
+        feedback.className = 'mt-4 p-3 rounded-none text-sm bg-red-100 text-red-800 border border-red-300';
+        feedback.classList.remove('hidden');
+      })
+      .finally(function() {
+        submitBtn.textContent = originalBtnText;
+        submitBtn.disabled = false;
+      });
+  });
+});
+</script>
+</section>
+</main>
+<!-- END: Main Content Area -->
+
+
+
+
+
+
+
+
+
+<style>
+@keyframes blink {
+    50% { opacity: 0; }
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const words = ["Étudiant", "Master NET", "Recherche d'alternance"];
+    let wordIndex = 0, charIndex = 0, isDeleting = false;
+    const textEl = document.getElementById('typewriter-text');
+
+    function type() {
+        const currentWord = words[wordIndex];
+        if (!isDeleting) {
+            textEl.textContent = currentWord.substring(0, charIndex + 1);
+            charIndex++;
+            if (charIndex === currentWord.length) {
+                isDeleting = true;
+                setTimeout(type, 1800);
+                return;
+            }
+            setTimeout(type, 80);
+        } else {
+            textEl.textContent = currentWord.substring(0, charIndex - 1);
+            charIndex--;
+            if (charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                setTimeout(type, 300);
+                return;
+            }
+            setTimeout(type, 40);
+        }
+    }
+    type();
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    window.scrollTo(0,0);
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    revealEls.forEach(el => observer.observe(el));
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    let scrollAnimId = null;
+
+    function smoothScrollToElement(targetEl, duration) {
+        if (scrollAnimId) cancelAnimationFrame(scrollAnimId);
+
+        const startY = window.scrollY;
+        const startTime = performance.now();
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+        function easeInOutQuad(t) {
+            return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+        }
+
+        function step(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = easeInOutQuad(progress);
+
+            const currentTargetY = Math.min(
+                targetEl.getBoundingClientRect().top + window.scrollY - 20,
+                maxScroll
+            );
+            const distance = currentTargetY - startY;
+            window.scrollTo(0, startY + distance * eased);
+
+            if (progress < 1) {
+                scrollAnimId = requestAnimationFrame(step);
+            } else {
+                scrollAnimId = null;
+            }
+        }
+        scrollAnimId = requestAnimationFrame(step);
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId.length > 1) {
+                const targetEl = document.querySelector(targetId);
+                if (targetEl) {
+                    e.preventDefault();
+                    smoothScrollToElement(targetEl, 1000);
+                }
+            }
+        });
+    });
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const galleryEl = document.getElementById('cursor-gallery');
+    const galleryImgs = galleryEl.querySelectorAll('.gallery-img');
+
+    // === A REMPLACER : mettez ici vos 5 URLs d'affiches de films et 5 URLs de jaquettes de jeux ===
+    const galleries = {
+        cinema: [
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSymGJYj-ByA4KjAjxbl4Egh0cyWnzhhenilPNnjcOZSg&s=10',
+            'https://m.media-amazon.com/images/I/81fsCuH2seL._AC_UF894,1000_QL80_.jpg',
+            'https://antreducinema.fr/wp-content/uploads/2021/04/fantastic-mr-fox.jpg',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTInhuhM21Hzxh9XVoxB6uK_BqJzFeYWPBJHsHsItJdlw&s=10',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdHtuUNoQEHUuF8sJVkxEoKoY95bfKRTrkO7gDvB4m4w&s=10'
+        ],
+        jeux: [
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs_SVubfBX3aFwmy-TNSRKVAGDtIugou6kH8SBXZK81A&s=10',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc-fU7qGWUxLKcQpR1-kz1eJLr0PZisT32kmzo_ABvOA&s',
+            'https://cdn11.bigcommerce.com/s-sdhub7he5o/images/stencil/1280x1280/products/1415/10550/c9c84346a7f8c9608ba2ba8d98bb9f94__34565.1683225006.jpg?c=1',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf_XHAQRPAMtPP6p_aEjlncOmElG9VGzTxzPGpBE-eXQ&s=10',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8cPk8oTCv_01XfAOFDgoPmBCAGg08eWMFczgFdMg74Q&s'
+        ],
+        culture: [
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO5e1QqmLbNyiI8aqD__lfAMWJUL2Uqw6SvtaPzzDnww&s=10',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmidcDih2XqF-CHtnBu4VYzVcOk-YPrsrzm3PRMAGwiA&s=10',
+            'https://placehold.co/128x192/2e7d32/ededed?text=Pop+3',
+            'https://placehold.co/128x192/2e7d32/ededed?text=Pop+4',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBh4ZYk9VlL3-dUThm6MY9nExqCocpr85i-LQc11WULw&s=10'
+        ]
+    };
+
+    document.querySelectorAll('.interest-hover').forEach(el => {
+        el.addEventListener('mouseenter', function(e) {
+            const key = this.getAttribute('data-gallery');
+            const urls = galleries[key];
+            if (!urls) return;
+            galleryImgs.forEach((img, i) => {
+                img.src = urls[i] || '';
+            });
+            galleryEl.style.left = e.clientX + 'px';
+            galleryEl.style.top = e.clientY + 'px';
+            galleryEl.classList.add('active');
+        });
+
+        el.addEventListener('mousemove', function(e) {
+            galleryEl.style.left = e.clientX + 'px';
+            galleryEl.style.top = e.clientY + 'px';
+        });
+
+        el.addEventListener('mouseleave', function() {
+            galleryEl.classList.remove('active');
+        });
+    });
+});
+</script>
+<div id="cursor-gallery" class="fixed pointer-events-none z-50" style="left:-999px; top:-999px;">
+<div class="flex gap-2">
+<img class="gallery-img w-20 h-28 object-cover border-2 border-white shadow-lg rounded-sm" src="" alt="">
+<img class="gallery-img w-20 h-28 object-cover border-2 border-white shadow-lg rounded-sm" src="" alt="">
+<img class="gallery-img w-20 h-28 object-cover border-2 border-white shadow-lg rounded-sm" src="" alt="">
+<img class="gallery-img w-20 h-28 object-cover border-2 border-white shadow-lg rounded-sm" src="" alt="">
+<img class="gallery-img w-20 h-28 object-cover border-2 border-white shadow-lg rounded-sm" src="" alt="">
+</div>
+</div>
+
+<!-- Bouton Retour en haut -->
+<style>
+  #backToTopBtn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 9999px;
+    background-color: #ffffff;
+    border: 2px solid #931004;
+    color: #931004;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 500;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease,
+      background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  #backToTopBtn.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  #backToTopBtn:hover {
+    background-color: #931004;
+    color: #ffffff;
+  }
+  @media (max-width: 768px) {
+    #backToTopBtn {
+      bottom: 16px;
+      right: 16px;
+      width: 44px;
+      height: 44px;
+    }
+  }
+</style>
+
+<button id="backToTopBtn" aria-label="Retour en haut de la page">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="12" y1="19" x2="12" y2="5"></line>
+    <polyline points="5 12 12 5 19 12"></polyline>
+  </svg>
+</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const btn = document.getElementById('backToTopBtn');
+
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  });
+
+  btn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+
+</body></html>
