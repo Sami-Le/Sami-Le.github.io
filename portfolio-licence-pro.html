@@ -208,15 +208,41 @@
 
 <div class="content-section">
 <div class="section-label">Licence Pro Innovation Numérique dans l'Édition</div>
-<p class="context-text">Projet réalisé dans le cadre de la formation, niveau le plus récent avant l'alternance au Ministère de l'Intérieur.</p>
+<p class="context-text">Création d'un site événementiel WordPress dans le cadre de la formation : "Halloween à Clichy-sous-Bois". Conception graphique, intégration via Elementor sur le thème OceanWP, configuration du formulaire d'inscription (Forminator) et optimisation SEO.</p>
+
 <div class="card-grid" style="grid-template-columns: 1fr;">
-<div class="zoomable-card portfolio-card" data-zoom-id="licence-1" style="display:flex; flex-direction:column; overflow:hidden; border:1px dashed var(--border-frame); cursor:pointer;">
-<div class="zoomable-thumb" data-zoom-thumb="licence-1" style="aspect-ratio:16/9; display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,0.03);">
-<div class="zoomable-placeholder" style="color:var(--text-muted); font-size:0.8rem; text-align:center; position:absolute;">Visuel Licence Pro<br>(à insérer)</div>
+<div class="zoomable-card portfolio-card" data-zoom-id="licence-hero" style="display:flex; flex-direction:column; overflow:hidden; border:1px dashed var(--border-frame); cursor:pointer;">
+<div class="zoomable-thumb zoomable-thumb-hero" data-zoom-thumb="licence-hero" data-zoom-mode="hero">
+<div class="zoomable-placeholder" style="color:var(--text-muted); font-size:0.8rem; text-align:center; position:absolute;">Page d'accueil du site<br>(à insérer)</div>
 </div>
-<p class="zoomable-caption" style="padding:10px 12px; font-size:0.8rem; color:#f0f0f0; margin:0; border-top:1px dashed var(--border-frame);">Commentaire à rédiger</p>
+<p class="zoomable-caption" style="padding:10px 12px; font-size:0.8rem; color:#f0f0f0; margin:0; border-top:1px dashed var(--border-frame); display:flex; justify-content:space-between; align-items:center; gap:12px;">
+<span>Page d'accueil du site événementiel, réalisée sur WordPress (thème OceanWP, Elementor).</span>
+<a href="https://lpin.sapikdesign.com/sami/" target="_blank" rel="noopener noreferrer" class="site-link-btn" onclick="event.stopPropagation(); this.classList.add('clicked'); setTimeout(() => this.classList.remove('clicked'), 400);">
+Voir le site
+<span class="site-link-arrow">
+<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</span>
+</a>
+</p>
+<p style="font-size: 0.7rem; color: var(--text-muted); margin: 8px 12px 0 12px; font-style: italic;">Démonstration en ligne disponible jusqu'à fin décembre 2026 (hébergement pédagogique temporaire).</p>
 </div>
 </div>
+
+<div class="card-grid" style="grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 24px;">
+<div class="zoomable-card portfolio-card" data-zoom-id="licence-programme" style="display:flex; flex-direction:column; overflow:hidden; border:1px dashed var(--border-frame); cursor:pointer;">
+<div class="zoomable-thumb" data-zoom-thumb="licence-programme" style="aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,0.03);">
+<div class="zoomable-placeholder" style="color:var(--text-muted); font-size:0.8rem; text-align:center; position:absolute;">Page programme<br>(à insérer)</div>
+</div>
+<p class="zoomable-caption" style="padding:10px 12px; font-size:0.8rem; color:#f0f0f0; margin:0; border-top:1px dashed var(--border-frame);">Page programme de l'événement.</p>
+</div>
+<div class="zoomable-card portfolio-card" data-zoom-id="licence-formulaire" style="display:flex; flex-direction:column; overflow:hidden; border:1px dashed var(--border-frame); cursor:pointer;">
+<div class="zoomable-thumb" data-zoom-thumb="licence-formulaire" style="aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,0.03);">
+<div class="zoomable-placeholder" style="color:var(--text-muted); font-size:0.8rem; text-align:center; position:absolute;">Formulaire d'inscription<br>(à insérer)</div>
+</div>
+<p class="zoomable-caption" style="padding:10px 12px; font-size:0.8rem; color:#f0f0f0; margin:0; border-top:1px dashed var(--border-frame);">Formulaire d'inscription réalisé avec Forminator.</p>
+</div>
+</div>
+
 </div>
 
 <div class="page-footer-nav">
@@ -243,7 +269,9 @@ document.addEventListener('DOMContentLoaded', function() {
     'bts2-1': { src: "https://youtu.be/FMellia5VRc" },
     'bts2-2': { src: "images/prod_estienne/carte_postale_projet.webp" },
     'bts2-3': { src: "https://youtu.be/YaNZBECUVUQ" },
-    'licence-1': { src: '' }
+    'licence-hero': { src: "images/prod_estienne/menu_halloween.png" },
+    'licence-programme': { src: "images/prod_estienne/halloween_programme.png" },
+    'licence-formulaire': { src: "images/prod_estienne/halloween_formulaire.png" }
   };
 
   function getYouTubeId(url) {
